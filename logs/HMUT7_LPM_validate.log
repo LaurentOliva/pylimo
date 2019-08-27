@@ -1,0 +1,35 @@
+2015-09-08 09:36:52,109 | INFO | ----------------
+2015-09-08 09:36:52,111 | INFO | ---- pYLiMo ----
+2015-09-08 09:36:52,111 | INFO | ----------------
+2015-09-08 09:36:52,111 | INFO | 
+2015-09-08 09:36:52,112 | INFO | pYthon LIve partition MObility validation tool
+2015-09-08 09:36:52,112 | INFO | 
+2015-09-08 09:36:52,112 | INFO | (*) Récupération des paramètres du fichier de config
+2015-09-08 09:36:52,113 | INFO |     ------------------------------------------------
+2015-09-08 09:36:52,113 | INFO | 
+2015-09-08 09:36:52,122 | INFO | (*) Connexion à la base MySQL
+2015-09-08 09:36:52,122 | INFO |     -------------------------
+2015-09-08 09:36:52,123 | INFO | 
+2015-09-08 09:36:52,306 | INFO | (*) Récupération des informations de localisation de la LPAR : HMUT7
+2015-09-08 09:36:52,307 | INFO |     --------------------------------------------------------
+2015-09-08 09:36:52,307 | INFO | 
+2015-09-08 09:36:52,338 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2015-09-08 09:36:52,339 | INFO |     ---------------------------------------------------------
+2015-09-08 09:36:52,339 | INFO | 
+2015-09-08 09:36:52,373 | INFO | (*) Connexion à la HMC phmcmd203 via Rest API..
+2015-09-08 09:36:52,374 | INFO |     -----------------------------------------------
+2015-09-08 09:36:52,375 | INFO | 
+2015-09-08 09:36:53,541 | INFO | --> token X-API-SESSION obtenu
+2015-09-08 09:37:04,087 | INFO | --> Informations LPAR HMUT7 collectées
+2015-09-08 09:37:04,087 | INFO | 
+2015-09-08 09:37:04,230 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 1 ...
+2015-09-08 09:37:04,230 | INFO |     ---------------------------------------
+2015-09-08 09:37:04,231 | INFO | 
+2015-09-08 09:37:05,306 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 2 ...
+2015-09-08 09:37:05,306 | INFO |     ---------------------------------------
+2015-09-08 09:37:05,306 | INFO | 
+2015-09-08 09:37:10,053 | INFO | [Thread-1] | LPM Validate JobID : 1422525102433 | LPAR : HMUT7 | HMC source : phmcmd203 | FRAME cible : P595_10_DC_2A2_A2 | HMC cible : phmcmd201 | result : COMPLETED_WITH_ERROR
+2015-09-08 09:37:21,589 | INFO | [Thread-4] | LPM Validate JobID : 1422525102435 | LPAR : HMUT7 | HMC source : phmcmd203 | FRAME cible : PFLEX_3_P460_Bay5 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-08 09:37:21,636 | INFO | [Thread-2] | LPM Validate JobID : 1422525102437 | LPAR : HMUT7 | HMC source : phmcmd203 | FRAME cible : P595_9_DC_2A1_H3 | HMC cible : phmcmd201 | result : COMPLETED_WITH_ERROR
+2015-09-08 09:37:22,993 | INFO | [Thread-3] | LPM Validate JobID : 1422525102436 | LPAR : HMUT7 | HMC source : phmcmd203 | FRAME cible : PFLEX_3_P460_Bay3 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-08 09:37:24,218 | INFO | [Thread-5] | LPM Validate JobID : 1422525102434 | LPAR : HMUT7 | HMC source : phmcmd203 | FRAME cible : S824_2_HOM | HMC cible : N/A | result : COMPLETED_WITH_ERROR

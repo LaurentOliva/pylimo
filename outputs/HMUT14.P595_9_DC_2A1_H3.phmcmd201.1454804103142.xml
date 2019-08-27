@@ -1,0 +1,1385 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>922c5bb8-6c7d-38ad-b191-8e185183ace7</id>
+    <title>JobResponse</title>
+    <published>2016-02-25T11:26:48.675+01:00</published>
+    <link rel="SELF" href="nulljobs/1454804103142"/>
+    <link rel="SELF" href="https://phmcmd201:12443/rest/api/uom/jobs/1454804103142/f5b54398-1679-47ef-ab49-05cdbd1caf08"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmcmd201:12443/rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/36AE929B-4F35-4333-A3EA-E976DB99B9F0/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kb="ROR" kxe="false">36AE929B-4F35-4333-A3EA-E976DB99B9F0</TargetUuid>
+    <JobID kb="ROR" kxe="false">1454804103142</JobID>
+    <TimeStarted kb="ROR" kxe="false">1456395973020</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1456396007723</TimeCompleted>
+    <Status kb="ROR" kxe="false">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kb="CUR" kxe="false" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">P595_9_DC_2A1_H3</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kb="ROO" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kb="ROR" kxe="false">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">Errors:
+HSCLA24E The migrating partition's virtual SCSI adapter 503 cannot be hosted by the existing virtual I/O server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS hosts on the destination managed system, then try the operation again.
+HSCLA24E The migrating partition's virtual SCSI adapter 502 cannot be hosted by the existing virtual I/O server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS hosts on the destination managed system, then try the operation again.
+
+Details:
+HSCLA356 The RMC command issued to partition PVIS09I failed.  This means that destination VIOS partition PVIS09I cannot host the virtual adapter 503 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut14_prodvg05
+VTD name hmut14_prodvg05 parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.510E405-V51-C503&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg05&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270088786D9A1556E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0040C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0044C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0004AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0054A8950A3158E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00E46796ADE608E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg06&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270066022718C10AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg07&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8a00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;10&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00D82A0E508F0AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8b00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;11&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVIS09I failed.  This means that destination VIOS partition PVIS09I cannot host the virtual adapter 502 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut14_prodvg05
+VTD name hmut14_prodvg05 parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.510E405-V52-C502&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg05&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270088786D9A1556E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg06&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270066022718C10AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg07&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00D82A0E508F0AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0040C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0044C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0004AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8300000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;3&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00E46796ADE608E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0054A8950A3158E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8a00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;10&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVIS09I failed.  This means that destination VIOS partition PVIS09I cannot host the virtual adapter 304 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f5cc011 500507630f9cc012 500507630f5cc013 500507630f9cc014 500507630f5cc015 500507630f5cc042 500507630f9cc043 500507630f9cc045 500507630f9cc041 500507630f5cc044 500507630f5cc048 500507630f9cc049 500507630f5cc04a 500507630f5cc019 500507630f9cc01a 500507630f9cc057 500507630f5cc058 500507630f9cc059 500507630f5cc05a 500507630f9cc05b 500507630f9cc054 500507630f5cc055 500507630f9cc056 500507630f5cc052 500507630f9cc053 
+FC adapter fcs0 is not NPIV capable. Adapter skipped.
+FC adapter fcs1 is not NPIV capable. Adapter skipped.
+FC adapter fcs2 is not NPIV capable. Adapter skipped.
+FC adapter fcs3 is not NPIV capable. Adapter skipped.
+FC adapter fcs4 is not NPIV capable. Adapter skipped.
+FC adapter fcs5 is not NPIV capable. Adapter skipped.
+FC adapter fcs16 is not NPIV capable. Adapter skipped.
+FC adapter fcs17 is not NPIV capable. Adapter skipped.
+FC adapter fcs20 is not NPIV capable. Adapter skipped.
+FC adapter fcs21 is not NPIV capable. Adapter skipped.
+FC adapter fcs14 is not NPIV capable. Adapter skipped.
+FC adapter fcs15 is not NPIV capable. Adapter skipped.
+domain_id for fscsi1 is: 123
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi7 is: 124
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi7 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi10 is: 103
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi10 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi11 is: 126
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi11 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi8 is: 126
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi8 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi9 is: 103
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi9 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi12 is: 36
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi12 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi13 is: 36
+GPN_FT failed for wwpn c0507601e81500b5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi13 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVIS09I by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc0507601e81500b4&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc0507601e81500b5&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc0507601e81500b4&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f5cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05b&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc053&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVIS09P failed.  This means that destination VIOS partition PVIS09P cannot host the virtual adapter 503 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut14_prodvg05
+VTD name hmut14_prodvg05 parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.510E405-V51-C503&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg05&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270088786D9A1556E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0040C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0044C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0004AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0054A8950A3158E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00E46796ADE608E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg06&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270066022718C10AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg07&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8a00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;10&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00D82A0E508F0AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8b00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;11&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVIS09P failed.  This means that destination VIOS partition PVIS09P cannot host the virtual adapter 502 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut14_prodvg05
+VTD name hmut14_prodvg05 parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.510E405-V52-C502&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg05&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270088786D9A1556E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg06&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601605040270066022718C10AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg07&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00D82A0E508F0AE51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0040C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A0044C91A8DA525E11105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0004AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8300000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;3&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C00E46796ADE608E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0054A8950A3158E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut14_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8a00000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;10&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVIS09P failed.  This means that destination VIOS partition PVIS09P cannot host the virtual adapter 305 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVIS09P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f9cc011 500507630f5cc012 500507630f9cc013 500507630f5cc014 500507630f9cc015 500507630f5cc041 500507630f9cc042 500507630f9cc044 500507630f5cc043 500507630f5cc045 500507630f9cc048 500507630f5cc049 500507630f9cc04a 500507630f9cc019 500507630f5cc01a 500507630f9cc052 500507630f5cc053 500507630f5cc054 500507630f9cc055 500507630f5cc056 500507630f5cc057 500507630f9cc058 500507630f5cc059 500507630f9cc05a 500507630f5cc05b 
+FC adapter fcs0 is not NPIV capable. Adapter skipped.
+FC adapter fcs1 is not NPIV capable. Adapter skipped.
+FC adapter fcs3 is not NPIV capable. Adapter skipped.
+FC adapter fcs4 is not NPIV capable. Adapter skipped.
+FC adapter fcs2 is not NPIV capable. Adapter skipped.
+FC adapter fcs5 is not NPIV capable. Adapter skipped.
+FC adapter fcs14 is not NPIV capable. Adapter skipped.
+FC adapter fcs15 is not NPIV capable. Adapter skipped.
+FC adapter fcs16 is not NPIV capable. Adapter skipped.
+FC adapter fcs17 is not NPIV capable. Adapter skipped.
+domain_id for fscsi6 is: 123
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi6 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi7 is: 124
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi7 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi8 is: 103
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi8 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi9 is: 126
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi9 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi12 is: 35
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi12 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi13 is: 35
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi13 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi10 is: 103
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi10 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi11 is: 126
+GPN_FT failed for wwpn c0507601e81500b7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi11 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVIS09P by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc0507601e81500b6&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc0507601e81500b7&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc0507601e81500b6&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f9cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc053&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05b&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

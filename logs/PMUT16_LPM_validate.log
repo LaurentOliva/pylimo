@@ -1,0 +1,41 @@
+2015-09-17 13:11:27,343 | INFO | ----------------
+2015-09-17 13:11:27,344 | INFO | ---- pYLiMo ----
+2015-09-17 13:11:27,344 | INFO | ----------------
+2015-09-17 13:11:27,345 | INFO | 
+2015-09-17 13:11:27,345 | INFO | pYthon LIve partition MObility validation tool
+2015-09-17 13:11:27,345 | INFO | 
+2015-09-17 13:11:27,345 | INFO | (*) Récupération des paramètres du fichier de config
+2015-09-17 13:11:27,346 | INFO |     ------------------------------------------------
+2015-09-17 13:11:27,346 | INFO | 
+2015-09-17 13:11:27,347 | INFO | (*) Connexion à la base MySQL
+2015-09-17 13:11:27,347 | INFO |     -------------------------
+2015-09-17 13:11:27,347 | INFO | 
+2015-09-17 13:11:27,365 | INFO | (*) Récupération des informations de localisation de la LPAR : PMUT16
+2015-09-17 13:11:27,366 | INFO |     --------------------------------------------------------
+2015-09-17 13:11:27,366 | INFO | 
+2015-09-17 13:11:27,367 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2015-09-17 13:11:27,367 | INFO |     ---------------------------------------------------------
+2015-09-17 13:11:27,367 | INFO | 
+2015-09-17 13:11:27,368 | INFO | (*) Connexion à la HMC phmc08 via Rest API..
+2015-09-17 13:11:27,368 | INFO |     -----------------------------------------------
+2015-09-17 13:11:27,369 | INFO | 
+2015-09-17 13:11:27,715 | INFO | --> token X-API-SESSION obtenu
+2015-09-17 13:11:33,582 | INFO | --> Informations LPAR PMUT16 collectées
+2015-09-17 13:11:33,583 | INFO | 
+2015-09-17 13:11:33,688 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 1 ...
+2015-09-17 13:11:33,689 | INFO |     ---------------------------------------
+2015-09-17 13:11:33,689 | INFO | 
+2015-09-17 13:11:44,428 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 2 ...
+2015-09-17 13:11:44,429 | INFO |     ---------------------------------------
+2015-09-17 13:11:44,429 | INFO | 
+2015-09-17 13:12:01,098 | INFO | [Thread-10] | LPM Validate JobID : 1430385440358 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:01,307 | INFO | [Thread-8] | LPM Validate JobID : 1430385440361 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : PFLEX_1_P460_Bay3 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:01,311 | INFO | [Thread-7] | LPM Validate JobID : 1430385440357 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_MBA4_PRD | HMC cible : phmc04 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:01,320 | INFO | [Thread-9] | LPM Validate JobID : 1430385440360 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:01,345 | INFO | [Thread-11] | LPM Validate JobID : 1430385440364 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:01,362 | INFO | [Thread-1] | LPM Validate JobID : 1430385440366 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_1_T327 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:05,550 | INFO | [Thread-6] | LPM Validate JobID : 1430385440362 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_MBA3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:06,883 | INFO | [Thread-5] | LPM Validate JobID : 1430385440365 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_6_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:08,215 | INFO | [Thread-3] | LPM Validate JobID : 1430385440367 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:09,409 | INFO | [Thread-2] | LPM Validate JobID : 1430385440363 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_2_T328 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-17 13:12:11,962 | INFO | [Thread-4] | LPM Validate JobID : 1430385440359 | LPAR : PMUT16 | HMC source : phmc08 | FRAME cible : P770_5_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR

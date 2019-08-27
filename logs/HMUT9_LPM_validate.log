@@ -1,0 +1,41 @@
+2015-09-17 13:19:19,436 | INFO | ----------------
+2015-09-17 13:19:19,437 | INFO | ---- pYLiMo ----
+2015-09-17 13:19:19,437 | INFO | ----------------
+2015-09-17 13:19:19,437 | INFO | 
+2015-09-17 13:19:19,438 | INFO | pYthon LIve partition MObility validation tool
+2015-09-17 13:19:19,438 | INFO | 
+2015-09-17 13:19:19,438 | INFO | (*) Récupération des paramètres du fichier de config
+2015-09-17 13:19:19,438 | INFO |     ------------------------------------------------
+2015-09-17 13:19:19,439 | INFO | 
+2015-09-17 13:19:19,440 | INFO | (*) Connexion à la base MySQL
+2015-09-17 13:19:19,441 | INFO |     -------------------------
+2015-09-17 13:19:19,441 | INFO | 
+2015-09-17 13:19:19,457 | INFO | (*) Récupération des informations de localisation de la LPAR : HMUT9
+2015-09-17 13:19:19,458 | INFO |     --------------------------------------------------------
+2015-09-17 13:19:19,458 | INFO | 
+2015-09-17 13:19:19,459 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2015-09-17 13:19:19,459 | INFO |     ---------------------------------------------------------
+2015-09-17 13:19:19,459 | INFO | 
+2015-09-17 13:19:19,460 | INFO | (*) Connexion à la HMC phmc02 via Rest API..
+2015-09-17 13:19:19,460 | INFO |     -----------------------------------------------
+2015-09-17 13:19:19,461 | INFO | 
+2015-09-17 13:19:20,134 | INFO | --> token X-API-SESSION obtenu
+2015-09-17 13:20:02,036 | INFO | --> Informations LPAR HMUT9 collectées
+2015-09-17 13:20:02,037 | INFO | 
+2015-09-17 13:20:02,615 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 1 ...
+2015-09-17 13:20:02,616 | INFO |     ---------------------------------------
+2015-09-17 13:20:02,616 | INFO | 
+2015-09-17 13:20:08,790 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 2 ...
+2015-09-17 13:20:08,790 | INFO |     ---------------------------------------
+2015-09-17 13:20:08,790 | INFO | 
+2015-09-17 13:20:24,100 | INFO | [Thread-11] | LPM Validate JobID : 1437266012605 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:24,139 | INFO | [Thread-6] | LPM Validate JobID : 1437266012606 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_MBA3_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:26,771 | INFO | [Thread-4] | LPM Validate JobID : 1437266012602 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_5_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:31,044 | INFO | [Thread-8] | LPM Validate JobID : 1437266012608 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay3 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:31,701 | INFO | [Thread-2] | LPM Validate JobID : 1437266012611 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_2_T328 | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:33,030 | INFO | [Thread-1] | LPM Validate JobID : 1437266012604 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_1_T327 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:36,139 | INFO | [Thread-10] | LPM Validate JobID : 1437266012610 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:38,196 | INFO | [Thread-5] | LPM Validate JobID : 1437266012603 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_6_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:39,263 | INFO | [Thread-9] | LPM Validate JobID : 1437266012607 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:20:49,349 | INFO | [Thread-3] | LPM Validate JobID : 1437266012612 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_4_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2015-09-17 13:21:01,438 | INFO | [Thread-7] | LPM Validate JobID : 1437266012609 | LPAR : HMUT9 | HMC source : phmc02 | FRAME cible : P770_MBA4_PRD | HMC cible : phmc04 | result : COMPLETED_WITH_ERROR

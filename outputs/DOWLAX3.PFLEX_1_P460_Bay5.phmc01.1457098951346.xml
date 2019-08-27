@@ -1,0 +1,271 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>ff1ec59a-d79e-374c-9459-caa8a49fff39</id>
+    <title>JobResponse</title>
+    <published>2016-03-18T11:45:42.123+01:00</published>
+    <link rel="SELF" href="nulljobs/1457098951346"/>
+    <link rel="SELF" href="https://phmc01:12443/rest/api/uom/jobs/1457098951346/74983880-b57a-4026-b192-832c85af78a0"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmc01:12443/rest/api/uom/ManagementConsole/07f5b283-51cd-3a82-9687-a685face2da8"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_3_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/52785D3C-55C6-4433-AB06-F02FEA594E4E/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kxe="false" kb="ROR">52785D3C-55C6-4433-AB06-F02FEA594E4E</TargetUuid>
+    <JobID kb="ROR" kxe="false">1457098951346</JobID>
+    <TimeStarted kxe="false" kb="ROR">1458297929288</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1458297941028</TimeCompleted>
+    <Status kxe="false" kb="ROR">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_3_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_3_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kxe="false" kb="CUR" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kxe="false" kb="ROR">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">PFLEX_1_P460_Bay5</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kxe="false" kb="ROO" schemaVersion="V1_3_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kxe="false" kb="ROR">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_3_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_3_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kxe="false" kb="ROR">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_3_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kxe="false" kb="ROR">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">Errors:
+HSCLA27C The operation to get the physical device location for adapter U7895.43X.06D10AB-V1-C4 on the virtual I/O server partition PVISFX76I has failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V1-C4 -w 13857705823195431154 -W 13857705823195431155 -c RPA -a ACTIVE_LPM -d 1 
+The partition standard error is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76I' (hostname: pvisfx76i)
+domain_id for fscsi1 is: 1
+Found target WWPN=500507680b3177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b3177b1 with SCSI_ID=11f00
+Found target WWPN=500507680225dde0 with SCSI_ID=11d00
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+domain_id for fscsi0 is: 1
+VFC adapter vfchost6 is on partition 6, count= 0
+VFC adapter name: vfchost7 proto name: fscsi1, rc=0
+Client LPAR with ID 6 mapped to fscsi1 more than once via vfchost40 vfchost7. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+
+HSCLA27C The operation to get the physical device location for adapter U7895.43X.06D10AB-V2-C3 on the virtual I/O server partition PVISFX76P has failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V2-C3 -w 13857705823195431152 -W 13857705823195431153 -c RPA -a ACTIVE_LPM -d 1 
+The partition standard error is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76P' (hostname: pvisfx76p)
+domain_id for fscsi1 is: 1
+Found target WWPN=500507680b3177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b3177b1 with SCSI_ID=11f00
+Found target WWPN=500507680225dddf with SCSI_ID=10000
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+domain_id for fscsi0 is: 1
+VFC adapter vfchost6 is on partition 6, count= 0
+VFC adapter name: vfchost7 proto name: fscsi1, rc=0
+Client LPAR with ID 6 mapped to fscsi1 more than once via vfchost41 vfchost7. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+
+HSCLA27C The operation to get the physical device location for adapter U7895.43X.06D10AB-V1-C5 on the virtual I/O server partition PVISFX76I has failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V1-C5 -w 13857705823195431150 -W 13857705823195431151 -c RPA -a ACTIVE_LPM -d 1 
+The partition standard error is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76I' (hostname: pvisfx76i)
+domain_id for fscsi0 is: 1
+Found target WWPN=500507680b2177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b2177b1 with SCSI_ID=11f00
+Found target WWPN=500507680215dde0 with SCSI_ID=11d00
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+Client LPAR with ID 6 mapped to fscsi0 more than once via vfchost41 vfchost6. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+
+HSCLA27C The operation to get the physical device location for adapter U7895.43X.06D10AB-V2-C4 on the virtual I/O server partition PVISFX76P has failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V2-C4 -w 13857705823195431148 -W 13857705823195431149 -c RPA -a ACTIVE_LPM -d 1 
+The partition standard error is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76P' (hostname: pvisfx76p)
+domain_id for fscsi0 is: 1
+Found target WWPN=500507680b2177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b2177b1 with SCSI_ID=11f00
+Found target WWPN=500507680215dddf with SCSI_ID=10000
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+Client LPAR with ID 6 mapped to fscsi0 more than once via vfchost42 vfchost6. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+
+
+Details:
+HSCL400A There was a problem running the VIOS command. HSCLA29A The RMC command issued to partition PVISFX76I failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V1-C4 -w 13857705823195431154 -W 13857705823195431155 -c RPA -a ACTIVE_LPM -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+80 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76I' (hostname: pvisfx76i)
+domain_id for fscsi1 is: 1
+Found target WWPN=500507680b3177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b3177b1 with SCSI_ID=11f00
+Found target WWPN=500507680225dde0 with SCSI_ID=11d00
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+domain_id for fscsi0 is: 1
+VFC adapter vfchost6 is on partition 6, count= 0
+VFC adapter name: vfchost7 proto name: fscsi1, rc=0
+Client LPAR with ID 6 mapped to fscsi1 more than once via vfchost40 vfchost7. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+
+HSCL400A There was a problem running the VIOS command. HSCLA29A The RMC command issued to partition PVISFX76P failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V2-C3 -w 13857705823195431152 -W 13857705823195431153 -c RPA -a ACTIVE_LPM -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+80 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76P' (hostname: pvisfx76p)
+domain_id for fscsi1 is: 1
+Found target WWPN=500507680b3177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b3177b1 with SCSI_ID=11f00
+Found target WWPN=500507680225dddf with SCSI_ID=10000
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+domain_id for fscsi0 is: 1
+VFC adapter vfchost6 is on partition 6, count= 0
+VFC adapter name: vfchost7 proto name: fscsi1, rc=0
+Client LPAR with ID 6 mapped to fscsi1 more than once via vfchost41 vfchost7. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+
+HSCL400A There was a problem running the VIOS command. HSCLA29A The RMC command issued to partition PVISFX76I failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V1-C5 -w 13857705823195431150 -W 13857705823195431151 -c RPA -a ACTIVE_LPM -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+80 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76I' (hostname: pvisfx76i)
+domain_id for fscsi0 is: 1
+Found target WWPN=500507680b2177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b2177b1 with SCSI_ID=11f00
+Found target WWPN=500507680215dde0 with SCSI_ID=11d00
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+Client LPAR with ID 6 mapped to fscsi0 more than once via vfchost41 vfchost6. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+
+HSCL400A There was a problem running the VIOS command. HSCLA29A The RMC command issued to partition PVISFX76P failed. 
+The partition command is: 
+migmgr -f get_adapter  -t vscsi -s U7895.43X.06D10AB-V2-C4 -w 13857705823195431148 -W 13857705823195431149 -c RPA -a ACTIVE_LPM -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+80 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+80
+
+VIOS_DETAILED_ERROR
+Executed get_adapter on VIOS 'PVISFX76P' (hostname: pvisfx76p)
+domain_id for fscsi0 is: 1
+Found target WWPN=500507680b2177b0 with SCSI_ID=11e00
+Found target WWPN=500507680b2177b1 with SCSI_ID=11f00
+Found target WWPN=500507680215dddf with SCSI_ID=10000
+
+VFC adapter name: vfchost6 proto name: fscsi0, rc=0
+Client LPAR with ID 6 mapped to fscsi0 more than once via vfchost42 vfchost6. Cannot migrate.
+Please collect HMC logs and VIOS snap data for further analysis by IBM support.
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

@@ -1,0 +1,136 @@
+2016-01-08 10:33:53,705 | INFO | ----------------
+2016-01-08 10:33:53,706 | INFO | ---- pYLiMo ----
+2016-01-08 10:33:53,707 | INFO | ----------------
+2016-01-08 10:33:53,707 | INFO | 
+2016-01-08 10:33:53,707 | INFO | pYthon LIve partition MObility validation tool
+2016-01-08 10:33:53,708 | INFO | 
+2016-01-08 10:33:53,708 | INFO | (*) Récupération des paramètres du fichier de config
+2016-01-08 10:33:53,708 | INFO |     ------------------------------------------------
+2016-01-08 10:33:53,709 | INFO | 
+2016-01-08 10:33:53,712 | INFO | (*) Connexion à la base MySQL
+2016-01-08 10:33:53,712 | INFO |     -------------------------
+2016-01-08 10:33:53,713 | INFO | 
+2016-01-08 10:33:53,744 | INFO | (*) Récupération des informations de localisation de la LPAR : DOWLAX3
+2016-01-08 10:33:53,745 | INFO |     --------------------------------------------------------
+2016-01-08 10:33:53,746 | INFO | 
+2016-01-08 10:33:53,747 | DEBUG | LPAR : DOWLAX3, SITE : TIGERY, CHASSIS : PFLEX_1_P460_Bay3, HMC : phmc01
+2016-01-08 10:33:53,747 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2016-01-08 10:33:53,747 | INFO |     ---------------------------------------------------------
+2016-01-08 10:33:53,748 | INFO | 
+2016-01-08 10:33:53,749 | INFO | (*) Connexion à la HMC phmc01 via Rest API..
+2016-01-08 10:33:53,749 | INFO |     -----------------------------------------------
+2016-01-08 10:33:53,749 | INFO | 
+2016-01-08 10:33:54,095 | DEBUG | Requête HTTP : PUT /rest/api/web/Logon
+2016-01-08 10:33:54,097 | DEBUG | Requête HTTP body : 
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<LogonRequest xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" schemaVersion="V1_1_0">
+  <Metadata>
+    <Atom/>
+  </Metadata>
+  <UserID kb="CUR" kxe="false">hscroot</UserID>
+  <Password kb="CUR" kxe="false">Saturne</Password>
+</LogonRequest>
+
+2016-01-08 10:33:54,934 | DEBUG | HTTP Status Code : 200 OK
+2016-01-08 10:33:54,936 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000000
+Content-Type: application/vnd.ibm.powervm.web+xml; type=LogonResponse
+Content-Length: 576
+Set-Cookie: JSESSIONID=00009sRLd70zU64Quk-9uAv4UnL:84927258-82d6-411b-ac6b-bad8b44bd70c; Path=/; Secure; HttpOnly
+Set-Cookie: CCFWSESSION=0620D49A620D9EA7E1869AD95021D1D5; Path=/; Secure; HttpOnly
+Date: Fri, 08 Jan 2016 09:33:32 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-08 10:33:54,937 | INFO | --> token X-API-SESSION obtenu
+2016-01-08 10:33:54,938 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/search/(PartitionName==DOWLAX3)
+2016-01-08 10:34:55,382 | DEBUG | HTTP Status Code : 200 OK
+2016-01-08 10:34:55,383 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000001
+Content-Type: application/atom+xml
+ETag: -476037231
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Fri, 08 Jan 2016 09:33:33 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: a96bfbc7-8e6b-4c42-aecf-add68bb56d2b
+Content-Length: 14131
+Set-Cookie: JSESSIONID=0000X9i569yty0Ir8jxjBlihl5L:84927258-82d6-411b-ac6b-bad8b44bd70c; Path=/; Secure; HttpOnly
+Date: Fri, 08 Jan 2016 09:34:33 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-01-08 10:34:55,384 | INFO | --> Informations LPAR DOWLAX3 collectées
+2016-01-08 10:34:55,384 | INFO | 
+2016-01-08 10:34:55,385 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/52785D3C-55C6-4433-AB06-F02FEA594E4E/VirtualSCSIClientAdapter/29c0fb3c-2f56-3aac-a5fe-9e2233a198b1
+2016-01-08 10:34:55,748 | DEBUG | HTTP Status Code : 200 OK
+2016-01-08 10:34:55,749 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000002
+Content-Type: application/atom+xml
+ETag: 700944807
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Fri, 08 Jan 2016 09:34:34 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: 78360135-99ec-49c7-a6bf-d97f90b4e4c0
+Content-Length: 3211
+Set-Cookie: JSESSIONID=000062pIYyOvkFhhYBQxSjBS9jJ:84927258-82d6-411b-ac6b-bad8b44bd70c; Path=/; Secure; HttpOnly
+Date: Fri, 08 Jan 2016 09:34:33 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-01-08 10:34:55,750 | DEBUG | Requête HTTP : GET /rest/api/uom/ManagedSystem/8a9cbc4b-a6ef-30de-8990-740d1d382720/quick/SystemName
+2016-01-08 10:34:55,907 | DEBUG | HTTP Status Code : 200 OK
+2016-01-08 10:34:55,908 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000003
+Content-Type: application/json
+Content-Length: 19
+Set-Cookie: JSESSIONID=0000KlYFOZaCtqqBFlmi0sYjs6_:84927258-82d6-411b-ac6b-bad8b44bd70c; Path=/; Secure; HttpOnly
+Date: Fri, 08 Jan 2016 09:34:33 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-08 10:34:55,909 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 1 ...
+2016-01-08 10:34:55,909 | INFO |     ---------------------------------------
+2016-01-08 10:34:55,909 | INFO | 
+2016-01-08 10:34:55,910 | DEBUG | Requête HTTP : PUT /rest/api/uom/ManagementConsole/07f5b283-51cd-3a82-9687-a685face2da8/do/CLIRunner
+2016-01-08 10:34:56,172 | DEBUG | HTTP Status Code : 200 OK
+2016-01-08 10:34:56,172 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000004
+Content-Type: application/atom+xml
+Content-Length: 2991
+Set-Cookie: JSESSIONID=0000c-oE4fXsBjfwlmyTLwOwnmm:84927258-82d6-411b-ac6b-bad8b44bd70c; Path=/; Secure; HttpOnly
+Date: Fri, 08 Jan 2016 09:34:33 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-08 10:34:56,173 | DEBUG | viosvrcmd -m PFLEX_1_P460_Bay3 --id 1 -c "rmdev -dev dowlax3_cdrom"
+2016-01-08 10:34:56,173 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1452244764178
+2016-01-08 10:34:57,206 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1452244764178
+2016-01-08 10:34:57,241 | DEBUG | cmd ==> viosvrcmd -m PFLEX_1_P460_Bay3 --id 1 -c "rmdev -dev dowlax3_cdrom"
+2016-01-08 10:34:57,242 | DEBUG | returnCode ==> 0
+2016-01-08 10:34:57,242 | DEBUG | result ==> dowlax3_cdrom deleted
+2016-01-08 10:34:57,243 | DEBUG | 
+2016-01-08 10:34:57,243 | DEBUG | Demarrage [Thread-1] 
+2016-01-08 10:34:57,246 | DEBUG | Demarrage [Thread-2] 
+2016-01-08 10:34:57,250 | DEBUG | Demarrage [Thread-3] 
+2016-01-08 10:34:57,254 | DEBUG | Demarrage [Thread-4] 
+2016-01-08 10:34:57,261 | DEBUG | Demarrage [Thread-5] 
+2016-01-08 10:34:57,264 | DEBUG | Demarrage [Thread-6] 
+2016-01-08 10:34:57,268 | DEBUG | Demarrage [Thread-7] 
+2016-01-08 10:34:57,272 | DEBUG | Demarrage [Thread-8] 
+2016-01-08 10:34:57,274 | DEBUG | Demarrage [Thread-9] 
+2016-01-08 10:34:57,277 | DEBUG | Demarrage [Thread-10] 
+2016-01-08 10:34:57,280 | DEBUG | Demarrage [Thread-11] 
+2016-01-08 10:35:03,145 | INFO | [Thread-1] | LPM Validate JobID : 1452244764179 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_1_T327 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:06,532 | INFO | [Thread-11] | LPM Validate JobID : 1452244764188 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:10,891 | INFO | [Thread-4] | LPM Validate JobID : 1452244764180 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_4_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:11,493 | INFO | [Thread-3] | LPM Validate JobID : 1452244764186 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:12,228 | INFO | [Thread-6] | LPM Validate JobID : 1452244764189 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_6_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:14,901 | INFO | [Thread-2] | LPM Validate JobID : 1452244764181 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_2_T328 | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:15,346 | INFO | [Thread-8] | LPM Validate JobID : 1452244764185 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_MBA4_PRD | HMC cible : phmc04 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:15,710 | INFO | [Thread-5] | LPM Validate JobID : 1452244764182 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_5_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:17,791 | INFO | [Thread-7] | LPM Validate JobID : 1452244764187 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_MBA3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:35:20,216 | INFO | [Thread-9] | LPM Validate JobID : 1452244764184 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : N/A | result : COMPLETED_OK
+2016-01-08 10:35:28,575 | INFO | [Thread-10] | LPM Validate JobID : 1452244764183 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : N/A | result : COMPLETED_OK

@@ -1,0 +1,1760 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>eb4804b0-0c0c-3b5b-9051-477fbc4a7db5</id>
+    <title>JobResponse</title>
+    <published>2016-02-23T15:45:58.676+01:00</published>
+    <link rel="SELF" href="nulljobs/1454804103119"/>
+    <link rel="SELF" href="https://phmcmd201:12443/rest/api/uom/jobs/1454804103119/941dfe70-48a4-4d10-8da8-6b221fcd68c4"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmcmd201:12443/rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/01E55C84-77B4-4C86-967C-3EB8B9155A44/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kb="ROR" kxe="false">01E55C84-77B4-4C86-967C-3EB8B9155A44</TargetUuid>
+    <JobID kb="ROR" kxe="false">1454804103119</JobID>
+    <TimeStarted kb="ROR" kxe="false">1456238749684</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1456238758514</TimeCompleted>
+    <Status kb="ROR" kxe="false">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kb="CUR" kxe="false" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCIPAddress</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">phmcmd203</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCUserID</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">hscroot</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">PFLEX_3_P460_Bay3</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kb="ROO" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kb="ROR" kxe="false">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">Errors:
+HSCL03EC There is not enough memory: Obtained : 61184, Required : 133120. Check that there is enough memory available to activate the partition. If not, create a new profile or modify the existing profile with the available resources, then activate the partition. If the partition must be activated with these resources, deactivate any running partition(s) using the resource then activate this partition.
+HSCLA24E The migrating partition's virtual SCSI adapter 503 cannot be hosted by the existing virtual I/O server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS hosts on the destination managed system, then try the operation again.
+HSCLA24E The migrating partition's virtual SCSI adapter 502 cannot be hosted by the existing virtual I/O server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS hosts on the destination managed system, then try the operation again.
+HSCLA319 The migrating partition's virtual fibre channel client adapter 307 cannot be hosted by the existing Virtual I/O Server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS host on the destination managed system, then try the operation again.
+HSCLA319 The migrating partition's virtual fibre channel client adapter 208 cannot be hosted by the existing Virtual I/O Server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS host on the destination managed system, then try the operation again.
+HSCLA319 The migrating partition's virtual fibre channel client adapter 306 cannot be hosted by the existing Virtual I/O Server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS host on the destination managed system, then try the operation again.
+HSCLA319 The migrating partition's virtual fibre channel client adapter 207 cannot be hosted by the existing Virtual I/O Server (VIOS) partitions on the destination managed system.  To migrate the partition, set up the necessary VIOS host on the destination managed system, then try the operation again.
+HSCLA251 The management console is not able to suggest a virtual I/O server (VIOS) partition on the destination managed system to host the migrating partition's virtual ethernet client adapter configured to use vlan 106.  To migrate the partition, verify the correct setup of the destination managed system's VIOS partitions, and try the operation again.
+HSCLA251 The management console is not able to suggest a virtual I/O server (VIOS) partition on the destination managed system to host the migrating partition's virtual ethernet client adapter configured to use vlan 105.  To migrate the partition, verify the correct setup of the destination managed system's VIOS partitions, and try the operation again.
+HSCLA251 The management console is not able to suggest a virtual I/O server (VIOS) partition on the destination managed system to host the migrating partition's virtual ethernet client adapter configured to use vlan 111.  To migrate the partition, verify the correct setup of the destination managed system's VIOS partitions, and try the operation again.
+
+Details:
+HSCLA28D The VIOS partition 2*7895-43X*10D10CB(PVISFX77P) has not been defined to be a mover service partition (MSP).  If the intent is to use this VIOS partition as an MSP, set the MSP attribute for this partition, and try the operation again.
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 503 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut13_rootvg
+VTD name hmut13_rootvg parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.835BC34-V51-C503&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00E2FBFC0DD621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00A26B4ECED621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700BA406B4D4A58E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0008AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C008655558172D7E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700FAC3215663B7E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 502 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut13_rootvg
+VTD name hmut13_rootvg parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.835BC34-V52-C502&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00E2FBFC0DD621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00A26B4ECED621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700BA406B4D4A58E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8300000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;3&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0008AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C008655558172D7E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700FAC3215663B7E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 307 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f9cc011 500507630f5cc012 500507630f9cc013 500507630f5cc014 500507630f9cc015 500507630f5cc041 500507630f9cc042 500507630f9cc044 500507630f5cc043 500507630f5cc045 500507630f9cc048 500507630f5cc049 500507630f9cc04a 500507630f9cc019 500507630f5cc01a 500507630f9cc052 500507630f5cc053 500507630f5cc054 500507630f9cc055 500507630f5cc056 500507630f5cc057 500507630f9cc058 500507630f5cc059 500507630f9cc05a 500507630f5cc05b 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000bb
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000bb
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77I by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000ba&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000bb&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000ba&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f9cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc053&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05b&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 208 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500601673b203977 5006016f3b203977 5006016146e070bc 5006016946e070bc 50060162476004b2 5006016a476004b2 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000a5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000a5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77I by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;6&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;800&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;4&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000a4&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000a5&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000a4&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500601673b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016f3b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016146e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016946e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060162476004b2&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016a476004b2&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 306 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f5cc011 500507630f9cc012 500507630f5cc013 500507630f9cc014 500507630f5cc015 500507630f5cc042 500507630f9cc043 500507630f9cc045 500507630f9cc041 500507630f5cc044 500507630f5cc048 500507630f9cc049 500507630f5cc04a 500507630f5cc019 500507630f9cc01a 500507630f9cc057 500507630f5cc058 500507630f9cc059 500507630f5cc05a 500507630f9cc05b 500507630f9cc054 500507630f5cc055 500507630f9cc056 500507630f5cc052 500507630f9cc053 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000b9
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000b9
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77I by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000b8&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000b9&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000b8&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f5cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05b&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc053&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot host the virtual adapter 207 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500601643b203977 5006016c3b203977 5006016046e070bc 5006016846e070bc 50060161476004b2 50060169476004b2 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000a7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000a7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77I by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;6&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;800&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;4&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000a6&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000a7&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000a6&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500601643b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016c3b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016046e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016846e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060161476004b2&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060169476004b2&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 503 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut13_rootvg
+VTD name hmut13_rootvg parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.835BC34-V51-C503&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00E2FBFC0DD621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00A26B4ECED621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700BA406B4D4A58E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0008AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C008655558172D7E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700FAC3215663B7E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8900000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;9&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 502 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+85 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+85
+
+VIOS_DETAILED_ERROR
+VTD name hmut13_rootvg
+VTD name hmut13_rootvg parent  rc=23
+odmget_get_first didn't find CuAt query&lt;attribute = 'unique_id'&gt;
+Returning from vscsi_dest_adapter rc=85
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;v-scsi-host&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.4&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;clusterID&gt;0&lt;/clusterID&gt;
+		&lt;srcDrcName&gt;U9119.FHA.835BC34-V52-C502&lt;/srcDrcName&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;1&lt;/effectiveVIOScompatability&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_rootvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8100000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;1&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00E2FBFC0DD621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8200000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;2&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016018502A00A26B4ECED621E21105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg03&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8500000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;5&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700BA406B4D4A58E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8300000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;3&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C0008AA78AFD555E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg02&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8400000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;4&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;34213600601608DD02C008655558172D7E31105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_prodvg04&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8600000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;1&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;6&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700FAC3215663B7E41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_hb&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8700000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;7&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700AA892ADF4CFDE41105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+	&lt;virtDev&gt;
+		&lt;vDevName&gt;hmut13_caa01&lt;/vDevName&gt;
+		&lt;vLUN&gt;
+			&lt;LUA&gt;0x8800000000000000&lt;/LUA&gt;
+			&lt;LUNState&gt;0&lt;/LUNState&gt;
+			&lt;clientReserve&gt;no&lt;/clientReserve&gt;
+			&lt;AIX&gt;
+				&lt;type&gt;vdasd&lt;/type&gt;
+				&lt;connWhere&gt;8&lt;/connWhere&gt;
+			&lt;/AIX&gt;
+		&lt;/vLUN&gt;
+		&lt;blockStorage&gt;
+			&lt;reserveType&gt;NO_RESERVE&lt;/reserveType&gt;
+			&lt;bdevType&gt;1&lt;/bdevType&gt;
+			&lt;restore520&gt;true&lt;/restore520&gt;
+			&lt;AIX&gt;
+				&lt;udid&gt;342136006016050402700C05543D0B915E51105VRAID03DGCfcp&lt;/udid&gt;
+				&lt;type&gt;UDID&lt;/type&gt;
+			&lt;/AIX&gt;
+		&lt;/blockStorage&gt;
+	&lt;/virtDev&gt;
+&lt;/v-scsi-host&gt;
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 307 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f9cc011 500507630f5cc012 500507630f9cc013 500507630f5cc014 500507630f9cc015 500507630f5cc041 500507630f9cc042 500507630f9cc044 500507630f5cc043 500507630f5cc045 500507630f9cc048 500507630f5cc049 500507630f9cc04a 500507630f9cc019 500507630f5cc01a 500507630f9cc052 500507630f5cc053 500507630f5cc054 500507630f9cc055 500507630f5cc056 500507630f5cc057 500507630f9cc058 500507630f5cc059 500507630f9cc05a 500507630f5cc05b 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000bb
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000bb
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77P by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000ba&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000bb&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000ba&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f9cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc053&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05b&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 208 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500601673b203977 5006016f3b203977 5006016146e070bc 5006016946e070bc 50060162476004b2 5006016a476004b2 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000a5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000a5
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77P by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;6&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;800&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;4&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000a4&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000a5&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000a4&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500601673b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016f3b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016146e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016946e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060162476004b2&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016a476004b2&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 306 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500507630f5cc011 500507630f9cc012 500507630f5cc013 500507630f9cc014 500507630f5cc015 500507630f5cc042 500507630f9cc043 500507630f9cc045 500507630f9cc041 500507630f5cc044 500507630f5cc048 500507630f9cc049 500507630f5cc04a 500507630f5cc019 500507630f9cc01a 500507630f9cc057 500507630f5cc058 500507630f9cc059 500507630f5cc05a 500507630f9cc05b 500507630f9cc054 500507630f5cc055 500507630f9cc056 500507630f5cc052 500507630f9cc053 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000b9
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000b9
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77P by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;25&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;400&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;6&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000b8&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000b9&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000b8&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;52&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500507630f5cc011&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc012&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc013&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc014&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc015&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc042&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc043&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc045&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc041&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc044&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc048&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc049&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc04a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc019&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc01a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc057&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc058&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc059&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc05a&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc05b&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc054&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc055&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc056&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f5cc052&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x500507630f9cc053&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA356 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot host the virtual adapter 207 on the migrating partition. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t vscsi -C 0x3 -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+69 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_vscsi'
+69
+
+VIOS_DETAILED_ERROR
+Client Target WWPNs: 500601643b203977 5006016c3b203977 5006016046e070bc 5006016846e070bc 50060161476004b2 50060169476004b2 
+domain_id for fscsi0 is: 1
+GPN_FT failed for wwpn c05076013e4000a7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi0 is zoned such that it does not have access to the same target ports as the source 
+domain_id for fscsi1 is: 1
+GPN_FT failed for wwpn c05076013e4000a7
+GPN_FT failure:
+    cmd_rsp_code:    0x8001
+    reason_code:     0x9
+    reason_code_exp: 0x7
+Target reject command 4 flags 2
+fscsi1 is zoned such that it does not have access to the same target ports as the source 
+There are no adapters available that are capable of supporting a virtual fibre channel adapter
+Error 110 detected on PVISFX77P by .
+Unable to find a fibre channel port on the target side VIOS that is
+ compatible with the migrating virtual adapter.  Check max transfer
+ size and SAN zoning on target side fibre channel (fcs) ports.
+Returning from npiv_dest_adapter rc=69
+End Detailed Message.
+ 
+The OS standard err is: 
+ 
+ 
+The search was performed for the following device description: 
+&lt;vfc-server&gt;
+	&lt;generalInfo&gt;
+		&lt;version&gt;2.3&lt;/version&gt;
+		&lt;maxTranfer&gt;1048576&lt;/maxTranfer&gt;
+		&lt;minVIOSpatch&gt;0&lt;/minVIOSpatch&gt;
+		&lt;minVIOScompatability&gt;1&lt;/minVIOScompatability&gt;
+		&lt;effectiveVIOScompatability&gt;-1&lt;/effectiveVIOScompatability&gt;
+		&lt;numPaths&gt;1&lt;/numPaths&gt;
+		&lt;numPhysAdapPaths&gt;1&lt;/numPhysAdapPaths&gt;
+		&lt;numDomainIDs&gt;1&lt;/numDomainIDs&gt;
+		&lt;numWWPN&gt;6&lt;/numWWPN&gt;
+		&lt;notZoned&gt;false&lt;/notZoned&gt;
+		&lt;adpInterF&gt;2&lt;/adpInterF&gt;
+		&lt;adpCap&gt;5&lt;/adpCap&gt;
+		&lt;adpCapMask&gt;0x0&lt;/adpCapMask&gt;
+		&lt;linkSpeed&gt;800&lt;/linkSpeed&gt;
+		&lt;numIniat&gt;4&lt;/numIniat&gt;
+		&lt;activeWWPN&gt;0xc05076013e4000a6&lt;/activeWWPN&gt;
+		&lt;inActiveWWPN&gt;0xc05076013e4000a7&lt;/inActiveWWPN&gt;
+		&lt;streamID&gt;0x0&lt;/streamID&gt;
+		&lt;nodeName&gt;0xc05076013e4000a6&lt;/nodeName&gt;
+	&lt;/generalInfo&gt;
+	&lt;ras&gt;
+		&lt;partitionID&gt;51&lt;/partitionID&gt;
+	&lt;/ras&gt;
+	&lt;wwpn_list&gt;
+		&lt;wwpn&gt;0x500601643b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016c3b203977&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016046e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x5006016846e070bc&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060161476004b2&lt;/wwpn&gt;
+		&lt;wwpn&gt;0x50060169476004b2&lt;/wwpn&gt;
+	&lt;/wwpn_list&gt;
+&lt;/vfc-server&gt;
+
+
+HSCLA355 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot be used to provide a bridge to the external network with VLAN ID 106, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+2 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=106
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+HSCLA355 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot be used to provide a bridge to the external network with VLAN ID 105, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+4 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=105
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+HSCLA355 The RMC command issued to partition PVISFX77I failed.  This means that destination VIOS partition PVISFX77I cannot be used to provide a bridge to the external network with VLAN ID 111, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77I failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+2 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=111
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+HSCLA355 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot be used to provide a bridge to the external network with VLAN ID 106, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+2 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=106
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+HSCLA355 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot be used to provide a bridge to the external network with VLAN ID 105, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+4 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=105
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+HSCLA355 The RMC command issued to partition PVISFX77P failed.  This means that destination VIOS partition PVISFX77P cannot be used to provide a bridge to the external network with VLAN ID 111, which is needed by a virtual Ethernet adapter on the migrating partition. If a bridge to the external VLAN is not required, you can specify the VSI override option to allow the management console to continue the operation. 
+HSCLA29A The RMC command issued to partition PVISFX77P failed. 
+The partition command is: 
+migmgr -f find_devices -t veth -d 1 
+The RMC return code is: 
+0 
+The OS command return code is: 
+2 
+The OS standard out is: 
+Running method '/usr/lib/methods/mig_veth'
+ 
+The OS standard err is: 
+(MIG_VETH:find_devices) Missing attribute:  
+ 
+The search was performed for the following device description: 
+VERSION=1
+VIO_TYPE=VETH
+VLAN_ID=111
+VSWITCH=ETHERNET0
+BRIDGED=yes
+
+
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

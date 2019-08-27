@@ -1,0 +1,91 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>4e156118-d73e-3e9e-8aeb-1475874b29f7</id>
+    <title>JobResponse</title>
+    <published>2016-02-17T16:07:33.480+01:00</published>
+    <link rel="SELF" href="nulljobs/1454804103078"/>
+    <link rel="SELF" href="https://phmcmd201:12443/rest/api/uom/jobs/1454804103078/14b5fdbf-7b3d-4722-b0bd-7eb63b92f959"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmcmd201:12443/rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/14249AA7-19AE-4062-87AE-FC586B015502/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kb="ROR" kxe="false">14249AA7-19AE-4062-87AE-FC586B015502</TargetUuid>
+    <JobID kb="ROR" kxe="false">1454804103078</JobID>
+    <TimeStarted kb="ROR" kxe="false">1455721648740</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1455721652366</TimeCompleted>
+    <Status kb="ROR" kxe="false">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kb="CUR" kxe="false" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCIPAddress</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">phmcmd203</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCUserID</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">hscroot</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">PFLEX_3_P460_Bay3</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kb="ROO" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kb="ROR" kxe="false">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">HSCL3655 The Secure Shell (SSH) communication to the destination management console has failed. Check if the specified remote management console IP address or host name is valid.
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

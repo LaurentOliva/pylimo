@@ -1,0 +1,77 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>39dd72ff-028a-3a6d-95eb-e5274fc3d6eb</id>
+    <title>JobResponse</title>
+    <published>2016-03-03T14:50:45.384+01:00</published>
+    <link rel="SELF" href="nulljobs/1452244764438"/>
+    <link rel="SELF" href="https://phmc01:12443/rest/api/uom/jobs/1452244764438/7d35a989-9bae-4d95-9624-a0bef785aa68"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmc01:12443/rest/api/uom/ManagementConsole/07f5b283-51cd-3a82-9687-a685face2da8"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/52785D3C-55C6-4433-AB06-F02FEA594E4E/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kb="ROR" kxe="false">52785D3C-55C6-4433-AB06-F02FEA594E4E</TargetUuid>
+    <JobID kb="ROR" kxe="false">1452244764438</JobID>
+    <TimeStarted kb="ROR" kxe="false">1457013044851</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1457013044957</TimeCompleted>
+    <Status kb="ROR" kxe="false">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kb="CUR" kxe="false" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">PFLEX_1_P460_Bay9</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kb="ROO" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kb="ROR" kxe="false">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">The destination managed system cannot be the same as the source managed system.
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

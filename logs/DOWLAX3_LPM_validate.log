@@ -1,0 +1,38 @@
+2016-03-18 11:45:24,125 | INFO | ----------------
+2016-03-18 11:45:24,131 | INFO | ---- pYLiMo ----
+2016-03-18 11:45:24,131 | INFO | ----------------
+2016-03-18 11:45:24,132 | INFO | 
+2016-03-18 11:45:24,133 | INFO | pYthon LIve partition MObility validation tool
+2016-03-18 11:45:24,133 | INFO | 
+2016-03-18 11:45:24,133 | INFO | (*) Récupération des paramètres du fichier de config
+2016-03-18 11:45:24,134 | INFO |     ------------------------------------------------
+2016-03-18 11:45:24,134 | INFO | 
+2016-03-18 11:45:24,141 | INFO | (*) Connexion à la base MySQL
+2016-03-18 11:45:24,141 | INFO |     -------------------------
+2016-03-18 11:45:24,141 | INFO | 
+2016-03-18 11:45:24,281 | INFO | (*) Récupération des informations de localisation de la LPAR : DOWLAX3
+2016-03-18 11:45:24,282 | INFO |     --------------------------------------------------------
+2016-03-18 11:45:24,282 | INFO | 
+2016-03-18 11:45:24,293 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2016-03-18 11:45:24,294 | INFO |     ---------------------------------------------------------
+2016-03-18 11:45:24,294 | INFO | 
+2016-03-18 11:45:24,297 | INFO | (*) Connexion à la HMC phmc01 via Rest API..
+2016-03-18 11:45:24,298 | INFO |     -----------------------------------------------
+2016-03-18 11:45:24,298 | INFO | 
+2016-03-18 11:45:24,858 | INFO | --> token X-API-SESSION obtenu
+2016-03-18 11:45:54,872 | INFO | --> Informations LPAR DOWLAX3 collectées
+2016-03-18 11:45:54,872 | INFO | 
+2016-03-18 11:45:55,011 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 1 ...
+2016-03-18 11:45:55,012 | INFO |     ---------------------------------------
+2016-03-18 11:45:55,012 | INFO | 
+2016-03-18 11:45:56,686 | INFO | [Thread-11] | LPM Validate JobID : 1457098951351 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:01,140 | INFO | [Thread-4] | LPM Validate JobID : 1457098951348 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_4_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:06,977 | INFO | [Thread-7] | LPM Validate JobID : 1457098951347 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_MBA3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:09,238 | INFO | [Thread-10] | LPM Validate JobID : 1457098951354 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:09,631 | INFO | [Thread-8] | LPM Validate JobID : 1457098951344 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_MBA4_PRD | HMC cible : phmc04 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:10,429 | INFO | [Thread-9] | LPM Validate JobID : 1457098951346 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:11,531 | INFO | [Thread-6] | LPM Validate JobID : 1457098951349 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_6_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:11,738 | INFO | [Thread-3] | LPM Validate JobID : 1457098951353 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_3_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:11,761 | INFO | [Thread-2] | LPM Validate JobID : 1457098951352 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_2_T328 | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:11,763 | INFO | [Thread-1] | LPM Validate JobID : 1457098951350 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_1_T327 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-03-18 11:46:11,795 | INFO | [Thread-5] | LPM Validate JobID : 1457098951345 | LPAR : DOWLAX3 | HMC source : phmc01 | FRAME cible : P770_5_PRD | HMC cible : phmc02 | result : COMPLETED_WITH_ERROR

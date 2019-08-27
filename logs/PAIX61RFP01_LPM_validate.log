@@ -1,0 +1,41 @@
+2015-11-16 10:48:23,000 | INFO | ----------------
+2015-11-16 10:48:23,002 | INFO | ---- pYLiMo ----
+2015-11-16 10:48:23,003 | INFO | ----------------
+2015-11-16 10:48:23,003 | INFO | 
+2015-11-16 10:48:23,004 | INFO | pYthon LIve partition MObility validation tool
+2015-11-16 10:48:23,004 | INFO | 
+2015-11-16 10:48:23,004 | INFO | (*) Récupération des paramètres du fichier de config
+2015-11-16 10:48:23,004 | INFO |     ------------------------------------------------
+2015-11-16 10:48:23,005 | INFO | 
+2015-11-16 10:48:23,014 | INFO | (*) Connexion à la base MySQL
+2015-11-16 10:48:23,015 | INFO |     -------------------------
+2015-11-16 10:48:23,015 | INFO | 
+2015-11-16 10:48:23,266 | INFO | (*) Récupération des informations de localisation de la LPAR : PAIX61RFP01
+2015-11-16 10:48:23,267 | INFO |     --------------------------------------------------------
+2015-11-16 10:48:23,268 | INFO | 
+2015-11-16 10:48:23,327 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2015-11-16 10:48:23,328 | INFO |     ---------------------------------------------------------
+2015-11-16 10:48:23,329 | INFO | 
+2015-11-16 10:48:23,350 | INFO | (*) Connexion à la HMC phmc02 via Rest API..
+2015-11-16 10:48:23,351 | INFO |     -----------------------------------------------
+2015-11-16 10:48:23,351 | INFO | 
+2015-11-16 10:48:23,992 | INFO | --> token X-API-SESSION obtenu
+2015-11-16 10:48:47,352 | INFO | --> Informations LPAR PAIX61RFP01 collectées
+2015-11-16 10:48:47,352 | INFO | 
+2015-11-16 10:48:47,594 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 4 ...
+2015-11-16 10:48:47,595 | INFO |     ---------------------------------------
+2015-11-16 10:48:47,595 | INFO | 
+2015-11-16 10:48:50,762 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 16 ...
+2015-11-16 10:48:50,762 | INFO |     ---------------------------------------
+2015-11-16 10:48:50,762 | INFO | 
+2015-11-16 10:49:01,473 | INFO | [Thread-7] | LPM Validate JobID : 1445586683290 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_MBA4_PRD | HMC cible : phmc04 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:02,736 | INFO | [Thread-10] | LPM Validate JobID : 1445586683292 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:04,011 | INFO | [Thread-3] | LPM Validate JobID : 1445586683291 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_3_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:05,625 | INFO | [Thread-6] | LPM Validate JobID : 1445586683299 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_MBA3_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:05,724 | INFO | [Thread-11] | LPM Validate JobID : 1445586683295 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:08,265 | INFO | [Thread-9] | LPM Validate JobID : 1445586683298 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:10,736 | INFO | [Thread-8] | LPM Validate JobID : 1445586683297 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay3 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:11,822 | INFO | [Thread-5] | LPM Validate JobID : 1445586683294 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_6_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:14,024 | INFO | [Thread-1] | LPM Validate JobID : 1445586683293 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_1_T327 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:49:15,163 | INFO | [Thread-2] | LPM Validate JobID : 1445586683289 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_2_T328 | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2015-11-16 10:51:29,034 | INFO | [Thread-4] | LPM Validate JobID : 1445586683296 | LPAR : PAIX61RFP01 | HMC source : phmc02 | FRAME cible : P770_4_PRD | HMC cible : phmc08 | result : COMPLETED_OK

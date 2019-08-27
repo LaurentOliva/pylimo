@@ -1,0 +1,149 @@
+2016-01-07 10:39:24,225 | INFO | ----------------
+2016-01-07 10:39:24,226 | INFO | ---- pYLiMo ----
+2016-01-07 10:39:24,226 | INFO | ----------------
+2016-01-07 10:39:24,226 | INFO | 
+2016-01-07 10:39:24,227 | INFO | pYthon LIve partition MObility validation tool
+2016-01-07 10:39:24,227 | INFO | 
+2016-01-07 10:39:24,228 | INFO | (*) Récupération des paramètres du fichier de config
+2016-01-07 10:39:24,228 | INFO |     ------------------------------------------------
+2016-01-07 10:39:24,228 | INFO | 
+2016-01-07 10:39:24,230 | INFO | (*) Connexion à la base MySQL
+2016-01-07 10:39:24,230 | INFO |     -------------------------
+2016-01-07 10:39:24,230 | INFO | 
+2016-01-07 10:39:24,250 | INFO | (*) Récupération des informations de localisation de la LPAR : DACT01
+2016-01-07 10:39:24,250 | INFO |     --------------------------------------------------------
+2016-01-07 10:39:24,250 | INFO | 
+2016-01-07 10:39:24,251 | DEBUG | LPAR : DACT01, SITE : TIGERY, CHASSIS : PFLEX_1_P460_Bay5, HMC : phmc01
+2016-01-07 10:39:24,252 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2016-01-07 10:39:24,252 | INFO |     ---------------------------------------------------------
+2016-01-07 10:39:24,252 | INFO | 
+2016-01-07 10:39:24,253 | INFO | (*) Connexion à la HMC phmc01 via Rest API..
+2016-01-07 10:39:24,253 | INFO |     -----------------------------------------------
+2016-01-07 10:39:24,253 | INFO | 
+2016-01-07 10:39:24,460 | DEBUG | Requête HTTP : PUT /rest/api/web/Logon
+2016-01-07 10:39:24,460 | DEBUG | Requête HTTP body : 
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<LogonRequest xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" schemaVersion="V1_1_0">
+  <Metadata>
+    <Atom/>
+  </Metadata>
+  <UserID kb="CUR" kxe="false">hscroot</UserID>
+  <Password kb="CUR" kxe="false">Saturne</Password>
+</LogonRequest>
+
+2016-01-07 10:39:24,569 | DEBUG | HTTP Status Code : 200 OK
+2016-01-07 10:39:24,570 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003166
+Content-Type: application/vnd.ibm.powervm.web+xml; type=LogonResponse
+Content-Length: 576
+Set-Cookie: JSESSIONID=0000Q-YxG7_CUvi6011KS6ejuoo:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Set-Cookie: CCFWSESSION=8668F670D26DC53146A92C84EAAF2602; Path=/; Secure; HttpOnly
+Date: Thu, 07 Jan 2016 09:39:02 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-07 10:39:24,571 | INFO | --> token X-API-SESSION obtenu
+2016-01-07 10:39:24,571 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/search/(PartitionName==DACT01)
+2016-01-07 10:39:26,885 | DEBUG | HTTP Status Code : 200 OK
+2016-01-07 10:39:26,886 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003167
+Content-Type: application/atom+xml
+ETag: -1590600805
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Thu, 07 Jan 2016 09:39:02 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: be9e1926-9f89-492a-9e06-f8250e0d0167
+Content-Length: 13074
+Set-Cookie: JSESSIONID=0000i_ymp5o0xH-3MS0kJ5rkuVY:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Date: Thu, 07 Jan 2016 09:39:04 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-01-07 10:39:26,887 | INFO | --> Informations LPAR DACT01 collectées
+2016-01-07 10:39:26,888 | INFO | 
+2016-01-07 10:39:26,889 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/571BA4C1-3CE6-496E-81C1-5C1F1BF20B71/VirtualSCSIClientAdapter/ccfa36b1-befc-3724-8503-eca83fbb2250
+2016-01-07 10:39:26,931 | DEBUG | HTTP Status Code : 200 OK
+2016-01-07 10:39:26,932 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003168
+Content-Type: application/atom+xml
+ETag: 960225125
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Thu, 07 Jan 2016 09:39:05 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: bac219f7-ddb5-4c1f-a1c5-4460a7bfc088
+Content-Length: 3211
+Set-Cookie: JSESSIONID=0000OtDWU2qzOaQm-4KfyiQNRwL:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Date: Thu, 07 Jan 2016 09:39:04 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-01-07 10:39:26,933 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/571BA4C1-3CE6-496E-81C1-5C1F1BF20B71/VirtualSCSIClientAdapter/0cf9968a-2793-33a9-a938-15ef133063c5
+2016-01-07 10:39:27,177 | DEBUG | HTTP Status Code : 200 OK
+2016-01-07 10:39:27,177 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003169
+Content-Type: application/atom+xml
+ETag: 862083356
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Thu, 07 Jan 2016 09:39:05 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: 6339e09e-decb-4d73-bee0-b469052c91e9
+Content-Length: 3211
+Set-Cookie: JSESSIONID=0000SzQZ0kaSxRgy4FdIzbfc-Md:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Date: Thu, 07 Jan 2016 09:39:04 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-01-07 10:39:27,179 | DEBUG | Requête HTTP : GET /rest/api/uom/ManagedSystem/fd9596c5-74fa-3025-aa8a-a7a92e22bc2c/quick/SystemName
+2016-01-07 10:39:27,253 | DEBUG | HTTP Status Code : 200 OK
+2016-01-07 10:39:27,253 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003170
+Content-Type: application/json
+Content-Length: 19
+Set-Cookie: JSESSIONID=0000_lel_b1sxiv6Fm-oUXysLgZ:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Date: Thu, 07 Jan 2016 09:39:04 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-07 10:39:27,254 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 2 ...
+2016-01-07 10:39:27,254 | INFO |     ---------------------------------------
+2016-01-07 10:39:27,255 | INFO | 
+2016-01-07 10:39:27,256 | DEBUG | Requête HTTP : PUT /rest/api/uom/ManagementConsole/07f5b283-51cd-3a82-9687-a685face2da8/do/CLIRunner
+2016-01-07 10:39:38,117 | DEBUG | HTTP Status Code : 500 Internal Server Error
+2016-01-07 10:39:38,117 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10003171
+Content-Type: application/atom+xml
+Content-Length: 1585
+Set-Cookie: JSESSIONID=0000L2qT9reeFeMJfrzgok_avIm:3e8cbcf1-1f5c-4794-82d9-eabb08f335d6; Path=/; Secure; HttpOnly
+Connection: Close
+Date: Thu, 07 Jan 2016 09:39:16 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-01-07 10:39:38,118 | DEBUG | ERREUR : 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>46dbfdaf-73c1-47d8-8115-24373fb76eed</id>
+    <title>HttpErrorResponse</title>
+    <published>2016-01-07T10:39:16.371+01:00</published>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=HttpErrorResponse">
+        <HttpErrorResponse:HttpErrorResponse xmlns:HttpErrorResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <HTTPStatus kxe="false" kb="ROR">500</HTTPStatus>
+    <RequestURI kb="ROR" kxe="false">/rest/api/uom/ManagementConsole/07f5b283-51cd-3a82-9687-a685face2da8/do/CLIRunner</RequestURI>
+    <ReasonCode kb="ROR" kxe="false">Unknown internal error.</ReasonCode>
+    <Message kb="ROO" kxe="false">REST0060 Unexpected exception invoking WestboundRootAdapter to request a single ROOT object of type class com.ibm.xmlns.powervm.uom.v2012_10.ManagementConsole</Message>
+    <RequestBody kb="ROO" kxe="false"/>
+    <RequestHeaders kb="ROO" kxe="false">{Accept-Encoding=identity, Host=phmc01:12443, Content-Length=1285, Content-Type=application/vnd.ibm.powervm.web+xml; type=JobRequest, X-API-Session=*******, X-Transaction-ID=XT10003171}</RequestHeaders>
+</HttpErrorResponse:HttpErrorResponse>
+    </content>
+</entry>
+
+2016-01-07 10:39:38,119 | DEBUG | viosvrcmd -m PFLEX_1_P460_Bay5 --id 2 -c "rmdev -dev dact01_cdrom"

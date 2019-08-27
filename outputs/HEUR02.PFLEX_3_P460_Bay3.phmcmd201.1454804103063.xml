@@ -1,0 +1,96 @@
+<?xml-stylesheet href="format_lpmOutput.xsl" type="text/xsl" ?> 
+
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:ns2="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns3="http://www.w3.org/1999/xhtml">
+    <id>fbdcbdbf-20e3-3b0a-8cc7-8e3d017b1aca</id>
+    <title>JobResponse</title>
+    <published>2016-02-17T15:50:19.185+01:00</published>
+    <link rel="SELF" href="nulljobs/1454804103063"/>
+    <link rel="SELF" href="https://phmcmd201:12443/rest/api/uom/jobs/1454804103063/a034b33a-8701-488e-9240-d6a663e59e83"/>
+    <link rel="MANAGEMENT_CONSOLE" href="https://phmcmd201:12443/rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87"/>
+    <author>
+        <name>IBM Power Systems Management Console</name>
+    </author>
+    <content type="application/vnd.ibm.powervm.web+xml; type=JobResponse">
+        <JobResponse:JobResponse xmlns:JobResponse="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" xmlns:ns2="http://www.w3.org/XML/1998/namespace/k2" schemaVersion="V1_2_0">
+    <Metadata>
+        <Atom/>
+    </Metadata>
+    <RequestURL kb="ROR" kxe="false" href="LogicalPartition/7A5B177D-9FE4-44D7-A99B-B6EDFAD172E8/do/MigrateValidate" rel="via" title="The URL to which the JobRequest was submitted."/>
+    <TargetUuid kb="ROR" kxe="false">7A5B177D-9FE4-44D7-A99B-B6EDFAD172E8</TargetUuid>
+    <JobID kb="ROR" kxe="false">1454804103063</JobID>
+    <TimeStarted kb="ROR" kxe="false">1455720615519</TimeStarted>
+    <TimeCompleted kb="ROR" kxe="false">1455720618700</TimeCompleted>
+    <Status kb="ROR" kxe="false">COMPLETED_WITH_ERROR</Status>
+    <JobRequestInstance kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <RequestedOperation kb="CUR" kxe="false" schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <OperationName kb="ROR" kxe="false">MigrateValidate</OperationName>
+            <GroupName kb="ROR" kxe="false">LogicalPartition</GroupName>
+        </RequestedOperation>
+        <JobParameters kb="CUR" kxe="false" schemaVersion="V1_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCIPAddress</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">phmcmd203</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetRemoteHMCUserID</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">hscroot</ParameterValue>
+            </JobParameter>
+            <JobParameter schemaVersion="V1_0">
+                <Metadata>
+                    <Atom/>
+                </Metadata>
+                <ParameterName kb="ROR" kxe="false">TargetManagedSystemName</ParameterName>
+                <ParameterValue kb="CUR" kxe="false">PFLEX_3_P460_Bay3</ParameterValue>
+            </JobParameter>
+        </JobParameters>
+    </JobRequestInstance>
+    <Progress kb="ROO" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <LinearProgress kb="ROR" kxe="false">1.0</LinearProgress>
+    </Progress>
+    <Results kb="ROR" kxe="false" schemaVersion="V1_2_0">
+        <Metadata>
+            <Atom/>
+        </Metadata>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">returnCode</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">1</ParameterValue>
+        </JobParameter>
+        <JobParameter schemaVersion="V1_2_0">
+            <Metadata>
+                <Atom/>
+            </Metadata>
+            <ParameterName kb="ROR" kxe="false">result</ParameterName>
+            <ParameterValue kb="CUR" kxe="false">Errors:
+HSCLA2B7 The management console was unable to find a valid mover service partition (MSP) on managed system P595_10_DC_2A2_A2.  MSPs must exist on both the source and destination managed systems, and they must be able to communicate with each other to be considered capable of performing an active partition migration.  Verify your migration setup with correctly configured and communicating MSPs on both source and destination managed systems, and try the operation again.
+
+Details:
+HSCLA28D The VIOS partition 51*9119-FHA*510E405(PVIS10I) has not been defined to be a mover service partition (MSP).  If the intent is to use this VIOS partition as an MSP, set the MSP attribute for this partition, and try the operation again.
+HSCLA28D The VIOS partition 52*9119-FHA*510E405(PVIS10P) has not been defined to be a mover service partition (MSP).  If the intent is to use this VIOS partition as an MSP, set the MSP attribute for this partition, and try the operation again.
+</ParameterValue>
+        </JobParameter>
+    </Results>
+</JobResponse:JobResponse>
+    </content>
+</entry>
+

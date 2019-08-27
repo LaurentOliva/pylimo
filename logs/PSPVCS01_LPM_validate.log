@@ -1,0 +1,8 @@
+2016-01-08 10:40:22,384 | INFO | [Thread-2] | LPM Validate JobID : 1445586683329 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : P770_2_T328 | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:22,457 | INFO | [Thread-4] | LPM Validate JobID : 1445586683330 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : P770_5_PRD | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:26,826 | INFO | [Thread-10] | LPM Validate JobID : 1445586683337 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay7 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:28,131 | INFO | [Thread-9] | LPM Validate JobID : 1445586683335 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay5 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:28,153 | INFO | [Thread-5] | LPM Validate JobID : 1445586683332 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : P770_6_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:30,952 | INFO | [Thread-11] | LPM Validate JobID : 1445586683331 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : PFLEX_1_P460_Bay9 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:31,925 | INFO | [Thread-3] | LPM Validate JobID : 1445586683334 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : P770_4_PRD | HMC cible : phmc08 | result : COMPLETED_WITH_ERROR
+2016-01-08 10:40:33,364 | INFO | [Thread-1] | LPM Validate JobID : 1445586683338 | LPAR : PSPVCS01 | HMC source : phmc02 | FRAME cible : P770_1_T327 | HMC cible : phmc01 | result : COMPLETED_WITH_ERROR

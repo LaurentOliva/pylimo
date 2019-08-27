@@ -1,0 +1,171 @@
+2016-02-17 15:51:07,843 | INFO | ----------------
+2016-02-17 15:51:07,844 | INFO | ---- pYLiMo ----
+2016-02-17 15:51:07,844 | INFO | ----------------
+2016-02-17 15:51:07,845 | INFO | 
+2016-02-17 15:51:07,845 | INFO | pYthon LIve partition MObility validation tool
+2016-02-17 15:51:07,845 | INFO | 
+2016-02-17 15:51:07,845 | INFO | (*) Récupération des paramètres du fichier de config
+2016-02-17 15:51:07,845 | INFO |     ------------------------------------------------
+2016-02-17 15:51:07,845 | INFO | 
+2016-02-17 15:51:07,870 | INFO | (*) Connexion à la base MySQL
+2016-02-17 15:51:07,871 | INFO |     -------------------------
+2016-02-17 15:51:07,871 | INFO | 
+2016-02-17 15:51:07,964 | INFO | (*) Récupération des informations de localisation de la LPAR : HEUR01
+2016-02-17 15:51:07,964 | INFO |     --------------------------------------------------------
+2016-02-17 15:51:07,965 | INFO | 
+2016-02-17 15:51:08,002 | DEBUG | LPAR : HEUR01, SITE : MARCOUSSIS_DC, CHASSIS : P595_9_DC_2A1_H3, HMC : phmcmd201
+2016-02-17 15:51:08,002 | INFO | (*) Recherche des châssis du même site où le LPM est possible
+2016-02-17 15:51:08,003 | INFO |     ---------------------------------------------------------
+2016-02-17 15:51:08,003 | INFO | 
+2016-02-17 15:51:08,004 | INFO | (*) Connexion à la HMC phmcmd201 via Rest API..
+2016-02-17 15:51:08,004 | INFO |     -----------------------------------------------
+2016-02-17 15:51:08,005 | INFO | 
+2016-02-17 15:51:08,585 | DEBUG | Requête HTTP : PUT /rest/api/web/Logon
+2016-02-17 15:51:08,586 | DEBUG | Requête HTTP body : 
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<LogonRequest xmlns="http://www.ibm.com/xmlns/systems/power/firmware/web/mc/2012_10/" schemaVersion="V1_1_0">
+  <Metadata>
+    <Atom/>
+  </Metadata>
+  <UserID kb="CUR" kxe="false">hscroot</UserID>
+  <Password kb="CUR" kxe="false">Saturne</Password>
+</LogonRequest>
+
+2016-02-17 15:51:09,431 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:09,432 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000000
+Content-Type: application/vnd.ibm.powervm.web+xml; type=LogonResponse
+Content-Length: 576
+Set-Cookie: JSESSIONID=0000gN-ThGsMdnvYFhd0NUd_Lfm:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Set-Cookie: CCFWSESSION=97D68EDFC4ABF9C9C80C3389FB502A8D; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:05 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-02-17 15:51:09,495 | INFO | --> token X-API-SESSION obtenu
+2016-02-17 15:51:09,496 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/search/(PartitionName==HEUR01)
+2016-02-17 15:51:44,648 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:44,649 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000001
+Content-Type: application/atom+xml
+ETag: 1599530062
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Wed, 17 Feb 2016 14:49:06 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: 60402916-c101-4f5c-a774-8b70beb2e1c3
+Content-Length: 13516
+Set-Cookie: JSESSIONID=0000Xv5_lOsLJEsdUekGLMzgi-4:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:41 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-02-17 15:51:44,650 | INFO | --> Informations LPAR HEUR01 collectées
+2016-02-17 15:51:44,650 | INFO | 
+2016-02-17 15:51:44,653 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/14249AA7-19AE-4062-87AE-FC586B015502/VirtualSCSIClientAdapter/6498b8f9-6d1d-35f2-b900-aa7bd5f08af4
+2016-02-17 15:51:44,830 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:44,831 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000002
+Content-Type: application/atom+xml
+ETag: -918336590
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Wed, 17 Feb 2016 14:49:41 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: 9b1d6302-3fde-4c0a-a696-fd05a93289c6
+Content-Length: 3151
+Set-Cookie: JSESSIONID=0000abpyQpcovUkyVyHijNZT7og:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:41 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-02-17 15:51:44,832 | DEBUG | Requête HTTP : GET /rest/api/uom/LogicalPartition/14249AA7-19AE-4062-87AE-FC586B015502/VirtualSCSIClientAdapter/416b33ac-1201-30bd-8738-427aef4ccab5
+2016-02-17 15:51:46,275 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:46,276 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000003
+Content-Type: application/atom+xml
+ETag: 309634150
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Last-Modified: Wed, 17 Feb 2016 14:49:42 GMT
+X-HMC-Schema-Version: V1_2_0
+X-TransactionRecord-Uuid: 8384ab8b-3ddf-4585-b266-fcbce11f10f2
+Content-Length: 3150
+Set-Cookie: JSESSIONID=00004pBZu3AscKgaiJpOWjcbQsU:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:42 GMT
+Cache-Control: no-transform, must-revalidate, proxy-revalidate, no-cache=set-cookie
+
+2016-02-17 15:51:46,276 | DEBUG | Requête HTTP : GET /rest/api/uom/ManagedSystem/248ce146-a3df-3e07-9bc3-edf736003e35/quick/SystemName
+2016-02-17 15:51:46,420 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:46,421 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000004
+Content-Type: application/json
+Content-Length: 18
+Set-Cookie: JSESSIONID=0000MA0W_SqYCwHIR-oziTMi36w:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:42 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-02-17 15:51:46,422 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 52 ...
+2016-02-17 15:51:46,423 | INFO |     ---------------------------------------
+2016-02-17 15:51:46,423 | INFO | 
+2016-02-17 15:51:46,425 | DEBUG | Requête HTTP : PUT /rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87/do/CLIRunner
+2016-02-17 15:51:47,223 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:47,223 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000005
+Content-Type: application/atom+xml
+Content-Length: 2993
+Set-Cookie: JSESSIONID=0000quB59vM-TaHs6rTGzul08pR:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:42 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-02-17 15:51:47,227 | DEBUG | viosvrcmd -m P595_9_DC_2A1_H3 --id 52 -c "rmdev -dev heur01_cdrom"
+2016-02-17 15:51:47,227 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1454804103053
+2016-02-17 15:51:48,258 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1454804103053
+2016-02-17 15:51:48,293 | DEBUG | cmd ==> viosvrcmd -m P595_9_DC_2A1_H3 --id 52 -c "rmdev -dev heur01_cdrom"
+2016-02-17 15:51:48,294 | DEBUG | returnCode ==> 1
+2016-02-17 15:51:48,295 | DEBUG | result ==> HSCL2970 The IOServer command has failed because of the following reason: 
+
+
+Some error messages may contain invalid information
+for the Virtual I/O Server environment.
+
+rmdev: 0514-519 The following device was not found in the customized
+	device configuration database:
+	name = 'heur01_cdrom'
+rc=1
+2016-02-17 15:51:48,295 | DEBUG | 
+2016-02-17 15:51:48,295 | INFO | --> Suppression CDROM VSCSI sur VIO LPAR ID : 51 ...
+2016-02-17 15:51:48,295 | INFO |     ---------------------------------------
+2016-02-17 15:51:48,296 | INFO | 
+2016-02-17 15:51:48,296 | DEBUG | Requête HTTP : PUT /rest/api/uom/ManagementConsole/3e3600a5-cef8-325a-a10d-134d7380da87/do/CLIRunner
+2016-02-17 15:51:48,918 | DEBUG | HTTP Status Code : 200 OK
+2016-02-17 15:51:48,918 | DEBUG | HTTP headers : 
+X-Powered-By: Servlet/3.0
+X-Transaction-ID: XT10000008
+Content-Type: application/atom+xml
+Content-Length: 2993
+Set-Cookie: JSESSIONID=0000D_jFVItfQJHp1Sfa-fA8X3-:b1524f5f-e802-47ad-b3ab-ca05d0f9fc66; Path=/; Secure; HttpOnly
+Date: Wed, 17 Feb 2016 14:49:44 GMT
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+
+2016-02-17 15:51:48,919 | DEBUG | viosvrcmd -m P595_9_DC_2A1_H3 --id 51 -c "rmdev -dev heur01_cdrom"
+2016-02-17 15:51:48,919 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1454804103054
+2016-02-17 15:51:49,948 | DEBUG | Requête HTTP : GET /rest/api/uom/jobs/1454804103054
+2016-02-17 15:51:49,978 | DEBUG | cmd ==> viosvrcmd -m P595_9_DC_2A1_H3 --id 51 -c "rmdev -dev heur01_cdrom"
+2016-02-17 15:51:49,979 | DEBUG | returnCode ==> 0
+2016-02-17 15:51:49,979 | DEBUG | result ==> heur01_cdrom deleted
+2016-02-17 15:51:49,979 | DEBUG | 
+2016-02-17 15:51:49,979 | DEBUG | Demarrage [Thread-1] 
+2016-02-17 15:51:49,983 | DEBUG | Demarrage [Thread-2] 
+2016-02-17 15:51:49,985 | DEBUG | Demarrage [Thread-3] 
+2016-02-17 15:51:49,987 | DEBUG | Demarrage [Thread-4] 
+2016-02-17 15:51:49,990 | DEBUG | Demarrage [Thread-5] 
+2016-02-17 15:51:55,080 | INFO | [Thread-1] | LPM Validate JobID : 1454804103056 | LPAR : HEUR01 | HMC source : phmcmd201 | FRAME cible : P595_10_DC_2A2_A2 | HMC cible : N/A | result : COMPLETED_WITH_ERROR
+2016-02-17 15:51:56,137 | INFO | [Thread-5] | LPM Validate JobID : 1454804103059 | LPAR : HEUR01 | HMC source : phmcmd201 | FRAME cible : S824_2_HOM | HMC cible : phmcmd203 | result : COMPLETED_WITH_ERROR
+2016-02-17 15:51:56,345 | INFO | [Thread-4] | LPM Validate JobID : 1454804103055 | LPAR : HEUR01 | HMC source : phmcmd201 | FRAME cible : S824_1_HOM | HMC cible : phmcmd203 | result : COMPLETED_WITH_ERROR
+2016-02-17 15:51:58,738 | INFO | [Thread-3] | LPM Validate JobID : 1454804103057 | LPAR : HEUR01 | HMC source : phmcmd201 | FRAME cible : PFLEX_3_P460_Bay5 | HMC cible : phmcmd203 | result : COMPLETED_WITH_ERROR
+2016-02-17 15:51:58,888 | INFO | [Thread-2] | LPM Validate JobID : 1454804103058 | LPAR : HEUR01 | HMC source : phmcmd201 | FRAME cible : PFLEX_3_P460_Bay3 | HMC cible : phmcmd203 | result : COMPLETED_WITH_ERROR
