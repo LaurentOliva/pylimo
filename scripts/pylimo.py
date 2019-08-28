@@ -278,13 +278,13 @@ except Exception as e:
 # récupère les paramètres du fichier de conf
 #--------------------------------------------
 try:
-    mysql_db = config.get('DB', 'com.socgen.mysql.db')
-    mysql_user = config.get('DB', 'com.socgen.mysql.user')
-    mysql_password = config.get('DB', 'com.socgen.mysql.password')
-    mysql_host = config.get('DB', 'com.socgen.mysql.host')
-    hmc_port = config.get('HMC', 'com.socgen.hmc.port')
-    hmc_user = config.get('HMC', 'com.socgen.hmc.user')
-    hmc_password = config.get('HMC', 'com.socgen.hmc.password')
+    mysql_db = config.get('DB', 'com.pylimo.mysql.db')
+    mysql_user = config.get('DB', 'com.pylimo.mysql.user')
+    mysql_password = config.get('DB', 'com.pylimo.mysql.password')
+    mysql_host = config.get('DB', 'com.pylimo.mysql.host')
+    hmc_port = config.get('HMC', 'com.pylimo.hmc.port')
+    hmc_user = config.get('HMC', 'com.pylimo.hmc.user')
+    hmc_password = config.get('HMC', 'com.pylimo.hmc.password')
 except Exception as e:
     log.error('Erreur rencontrée pendant la recupération des paramètres du fichier de config ' + args.config)
     log.debug(str(e))
