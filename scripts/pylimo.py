@@ -5,7 +5,7 @@
 #
 # Date : April - July 2015
 #
-# Author : Laurent Oliva (RESG/GTS/RET/INF/UNX/AIX)
+# Author : Laurent Oliva
 #
 import MySQLdb
 import os, sys, time, logging, socket, httplib, argparse, re, ConfigParser
@@ -40,16 +40,16 @@ xslt_sheet_path = 'format_lpmOutput.xsl'
 
 def initLogging(verbose=False):
     """
-    initLogging() : Cette fonction initialise le logger racine permettant d'afficher les messages du fil d'exécution principal du script.
+    initLogging() : Cette fonction initialise le logger racine permettant d'afficher les messages du fil d'exÃ©cution principal du script.
 
-    Les messages sont affichés sur la sortie standard si le script est exécuté en intéractif.
-    Sinon, ils sont consignés dans un fichier circulaire.
+    Les messages sont affichÃ©s sur la sortie standard si le script est exÃ©cutÃ© en intÃ©ractif.
+    Sinon, ils sont consignÃ©s dans un fichier circulaire.
     
     La fonction renvoie un objet de type logging.
 
-    Cet objet sera ensuite eventuellement utilisé dans certaines fonctions ou classes, de manière à ce que les messages importants soient affichés dans le fil d'exécution principal.
+    Cet objet sera ensuite eventuellement utilisÃ© dans certaines fonctions ou classes, de maniÃ¨re Ã  ce que les messages importants soient affichÃ©s dans le fil d'exÃ©cution principal.
 
-    Un filtre est appliqué au logger de manière à ce que les messages ne soient pas propagés aux logger dont le nom ne commence pas par 'root'
+    Un filtre est appliquÃ© au logger de maniÃ¨re Ã  ce que les messages ne soient pas propagÃ©s aux logger dont le nom ne commence pas par 'root'
     
     """
 
@@ -59,7 +59,7 @@ def initLogging(verbose=False):
     ## log handler dans un fichier
     logger_handler = RotatingFileHandler(pylimo_log + args.lpar + "_LPM_validate.log", 'a', 10240, 5, encoding=None)
 
-    ## si le script est appelé en mode interactif...
+    ## si le script est appelÃ© en mode interactif...
     if sys.__stdin__.isatty():
         logger_handler2 = logging.StreamHandler()
         logger_handler2.addFilter(logging.Filter('root'))
@@ -80,10 +80,10 @@ def initLogging(verbose=False):
 def connectMysql(hostname, user, password, schema):
     """
     connectMysql(hostname, user, password, schema)
-    Cette fonction se connecte à la base Mysql fournie en paramètre et retourne un objet
+    Cette fonction se connecte Ã  la base Mysql fournie en paramÃ¨tre et retourne un objet
     permettant d utiliser cette connexion
 
-    Si une erreur est rencontrée, la fonction renvoie une exception qu'il faut catcher
+    Si une erreur est rencontrÃ©e, la fonction renvoie une exception qu'il faut catcher
     """
 
     mydb = MySQLdb.connect(hostname, user, password, schema)
@@ -92,9 +92,9 @@ def connectMysql(hostname, user, password, schema):
 def getMyLocation(db, lpar):
     """
     getMyLocation(db, lpar)
-    Cette fcontion prend pour paramètre une DB MySQL et une LPAR.
+    Cette fcontion prend pour paramÃ¨tre une DB MySQL et une LPAR.
 
-    Cette LPAR est recherchée dans la base de donnée 'serversystemaix' hébergée sur PAIX01 en principe.
+    Cette LPAR est recherchÃ©e dans la base de donnÃ©e 'serversystemaix' hÃ©bergÃ©e sur PAIX01 en principe.
     """
 
     cursor = db.cursor()
@@ -112,9 +112,9 @@ def getMyLocation(db, lpar):
 def getAllLPMFrame(db, my_site, my_frame):
     """
     getAllLPMFrame(db, my_site, my_frame)
-    Cette fonction prend pour paramètre une DB MySQL, un site/datacenter et un châssis.
+    Cette fonction prend pour paramÃ¨tre une DB MySQL, un site/datacenter et un chÃ¢ssis.
 
-    Elle retourne la liste des frame 'LPM Ready' du site passé en paramètre.
+    Elle retourne la liste des frame 'LPM Ready' du site passÃ© en paramÃ¨tre.
     """
 
     my_result = []
@@ -132,9 +132,9 @@ def getAllLPMFrame(db, my_site, my_frame):
 
 def genXMLJob(E, jobName, jobValue):
     """
-    genXMLJob(E, jobName, jobValue) : Cette fonction prend trois paramètres
+    genXMLJob(E, jobName, jobValue) : Cette fonction prend trois paramÃ¨tres
 
-    Elle génère un ensemble de balises XML standard formant la syntaxe d'un job parameter de l'API REST.
+    Elle gÃ©nÃ¨re un ensemble de balises XML standard formant la syntaxe d'un job parameter de l'API REST.
 
     """
     XMLJob = E.JobParameter(E.Metadata(E.Atom), E.ParameterName(jobName, kxe="false", kb="ROR"), E.ParameterValue(jobValue, kxe="false", kb="CUR"), schemaVersion="V1_0")
@@ -259,7 +259,7 @@ log.info("----------------")
 log.info("")
 log.info("pYthon LIve partition MObility validation tool")
 log.info("")
-log.info("(*) Récupération des paramètres du fichier de config")
+log.info("(*) RÃ©cupÃ©ration des paramÃ¨tres du fichier de config")
 log.info("    ------------------------------------------------")
 log.info("")
 
@@ -270,12 +270,12 @@ config = ConfigParser.ConfigParser()
 try:
     fh = config.readfp(open(args.config))
 except Exception as e:
-    log.error('Le fichier ' + args.config + ' n\'a pas pû être parcouru ou est introuvable !')
+    log.error('Le fichier ' + args.config + ' n\'a pas pÃ» Ãªtre parcouru ou est introuvable !')
     log.debug(str(e))
     raise SystemExit(1)
 
 #--------------------------------------------
-# récupère les paramètres du fichier de conf
+# rÃ©cupÃ¨re les paramÃ¨tres du fichier de conf
 #--------------------------------------------
 try:
     mysql_db = config.get('DB', 'com.socgen.mysql.db')
@@ -286,98 +286,98 @@ try:
     hmc_user = config.get('HMC', 'com.socgen.hmc.user')
     hmc_password = config.get('HMC', 'com.socgen.hmc.password')
 except Exception as e:
-    log.error('Erreur rencontrée pendant la recupération des paramètres du fichier de config ' + args.config)
+    log.error('Erreur rencontrÃ©e pendant la recupÃ©ration des paramÃ¨tres du fichier de config ' + args.config)
     log.debug(str(e))
     raise SystemExit(1)
 
 #----------------------------
-# connexion à la base mysql
+# connexion Ã  la base mysql
 #----------------------------
 try:
-    log.info("(*) Connexion à la base MySQL")
+    log.info("(*) Connexion Ã  la base MySQL")
     log.info("    -------------------------")
     log.info("")
     mysql = connectMysql(mysql_host, mysql_user, mysql_password, mysql_db)
 except Exception as e:
-    log.error('ERREUR rencontrée lors de la connexion à la base MySQL !')
+    log.error('ERREUR rencontrÃ©e lors de la connexion Ã  la base MySQL !')
     log.debug(str(e))
     raise SystemExit(1)
 
 #---------------------------------------
-# récupération info localisation LPAR 
+# rÃ©cupÃ©ration info localisation LPAR 
 #---------------------------------------
 try:
-    log.info("(*) Récupération des informations de localisation de la LPAR : " + args.lpar)
+    log.info("(*) RÃ©cupÃ©ration des informations de localisation de la LPAR : " + args.lpar)
     log.info("    --------------------------------------------------------")
     log.info("")
     result = getMyLocation(db=mysql, lpar=args.lpar)
 except Exception as f:
-    log.error('Erreur lors de la récupération des informations de localisation de ' + args.lpar)
+    log.error('Erreur lors de la rÃ©cupÃ©ration des informations de localisation de ' + args.lpar)
     log.debug(str(f))
     raise SystemExit(1)
 
 if result == None:
-    log.error(args.lpar + ' n\'a pas été trouvé dans la base de données.')
-    log.debug("Requête SQL executée : SELECT PLTNAME,SITE,HMCNAME1,HMCNAME2,lpm_capable FROM platform_reference WHERE SERIAL = ( SELECT SUBSTRING(SN, -7) FROM host_platform WHERE HOSTNAME = " + args.lpar + " ) LIMIT 1 ")
+    log.error(args.lpar + ' n\'a pas Ã©tÃ© trouvÃ© dans la base de donnÃ©es.')
+    log.debug("RequÃªte SQL executÃ©e : SELECT PLTNAME,SITE,HMCNAME1,HMCNAME2,lpm_capable FROM platform_reference WHERE SERIAL = ( SELECT SUBSTRING(SN, -7) FROM host_platform WHERE HOSTNAME = " + args.lpar + " ) LIMIT 1 ")
     sys.exit(1)
 
-### (*) Si mode DEBUG activé : on affiche ce qu'on a trouvé dans la base mysql...
+### (*) Si mode DEBUG activÃ© : on affiche ce qu'on a trouvÃ© dans la base mysql...
 log.debug("LPAR : " + args.lpar + ", SITE : " + result['site'] + ", CHASSIS : " + result['frame'] + ", HMC : " + result['hmc1'])
 
 #---------------------------------------
 # on recherche les frame LPM capable 
-# du même site...
+# du mÃªme site...
 #---------------------------------------
 try:
-    log.info("(*) Recherche des châssis du même site où le LPM est possible")
+    log.info("(*) Recherche des chÃ¢ssis du mÃªme site oÃ¹ le LPM est possible")
     log.info("    ---------------------------------------------------------")
     log.info("")
     result_lpm = getAllLPMFrame(db=mysql, my_site=result["site"], my_frame=result["frame"])
 except Exception as g:
-    log.error('Erreur lors de l\'execution de la requête SQL de la fonction getAllLPMFrame()!')
-    log.debug("Requête SQL executée : SELECT PLTNAME,HMCNAME1,HMCNAME2 FROM platform_reference WHERE SITE = " + result['site'] + " AND lpm_capable = 1 AND STATE = 'Operating' AND PLTNAME <> " + result['frame'])
+    log.error('Erreur lors de l\'execution de la requÃªte SQL de la fonction getAllLPMFrame()!')
+    log.debug("RequÃªte SQL executÃ©e : SELECT PLTNAME,HMCNAME1,HMCNAME2 FROM platform_reference WHERE SITE = " + result['site'] + " AND lpm_capable = 1 AND STATE = 'Operating' AND PLTNAME <> " + result['frame'])
     log.debug(str(g))
     raise SystemExit(1)
 
 #--------------------------
 # connexion HMC...
 #--------------------------
-log.info("(*) Connexion à la HMC " + result["hmc1"] + " via Rest API..")
+log.info("(*) Connexion Ã  la HMC " + result["hmc1"] + " via Rest API..")
 log.info("    -----------------------------------------------")
 log.info("")
 hmc = hmcRestApi(hmc=result["hmc1"], hmc_port=hmc_port, log=log)
 token = hmc.getToken(user=hmc_user, password=hmc_password)
 if token == None:
-    log.error('ERREUR lors de la récupération du token X-API-SESSION ' + result["hmc1"])
+    log.error('ERREUR lors de la rÃ©cupÃ©ration du token X-API-SESSION ' + result["hmc1"])
     sys.exit(1)
 else:
     log.info('--> token X-API-SESSION obtenu')
 
 #---------------------------------
-# récupération infos & contrôles
+# rÃ©cupÃ©ration infos & contrÃ´les
 #---------------------------------
 
 lparInfos = hmc.loadLparInfos(lpar=args.lpar)
 if lparInfos == None:
-    log.info('ERREUR lors de la récupération des informations de la LPAR ' + args.lpar)
+    log.info('ERREUR lors de la rÃ©cupÃ©ration des informations de la LPAR ' + args.lpar)
     sys.exit(1)
 else:
-    log.info('--> Informations LPAR ' + args.lpar + ' collectées')
+    log.info('--> Informations LPAR ' + args.lpar + ' collectÃ©es')
     log.info('')
 
 lparUUID = hmc.getLparUuid()
 if lparUUID == None:
-    log.error('ERREUR lors de la récupération du lpar UUID de ' + args.lpar)
+    log.error('ERREUR lors de la rÃ©cupÃ©ration du lpar UUID de ' + args.lpar)
     sys.exit(1)
 
 sysUUID = hmc.getManagedSystemUuid()
 if sysUUID == None:
-    log.error('ERREUR lors de la récupération du managed system UUID')
+    log.error('ERREUR lors de la rÃ©cupÃ©ration du managed system UUID')
     sys.exit(1)
 
 rmcState = hmc.getResourceMonitoringControlState()
 if rmcState == None:
-    log.error('ERREUR lors de la vérification du DLPAR (RMC)')
+    log.error('ERREUR lors de la vÃ©rification du DLPAR (RMC)')
     sys.exit(1)
 
 if rmcState != 'active':
@@ -409,14 +409,14 @@ for id in viosID:
         jobStatus = hmc.getJobStatus(jobID)
 
 #------------------------------
-# LPM validate sur châssis
+# LPM validate sur chÃ¢ssis
 #------------------------------
 threads = []
 for element in result_lpm:
     elem = element.split(";")
 
     #-------------------------------------------------------------------
-    # on effectue un LPM validate vers les frame gérées par la même HMC
+    # on effectue un LPM validate vers les frame gÃ©rÃ©es par la mÃªme HMC
     #-------------------------------------------------------------------
     if elem[1] == result["hmc1"]:
         thread_LPM = doLPMValidateJob(log, hmc=result["hmc1"], token=token, lpar=args.lpar, uuid=lparUUID, targetFrame=elem[0])
@@ -424,7 +424,7 @@ for element in result_lpm:
         thread_LPM.start()
         threads.append(thread_LPM)
     #-------------------------------------------------------------------
-    # la même chose mais vers des frames gérées par d'autres HMC...
+    # la mÃªme chose mais vers des frames gÃ©rÃ©es par d'autres HMC...
     ##-------------------------------------------------------------------
     else:
         thread_LPM = doLPMValidateJob(log, hmc=result["hmc1"], token=token, lpar=args.lpar, uuid=lparUUID, targetFrame=elem[0], targetHMC=elem[1])
